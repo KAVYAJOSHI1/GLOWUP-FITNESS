@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "GlowUp",
+    "slug": "glowup-routine",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#08080F"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.glowup.routine",
+      "infoPlist": {
+        "NSMotionUsageDescription": "GlowUp uses motion data to count your steps and track fitness activity."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#08080F"
+      },
+      "package": "com.glowup.routine",
+      "versionCode": 2,
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "USE_EXACT_ALARM",
+        "SCHEDULE_EXACT_ALARM",
+        "android.permission.ACTIVITY_RECOGNITION",
+        "android.permission.BODY_SENSORS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#8B5CF6",
+          "sounds": []
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "GlowUp needs motion access to count your steps."
+        }
+      ]
+    ]
+  }
+}
